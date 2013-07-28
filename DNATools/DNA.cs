@@ -9,7 +9,6 @@ namespace DNATools
 {
     class DNA
     {
-        private string sequence;
         public string Sequence { get; set; }
         
         /// <summary>
@@ -18,8 +17,14 @@ namespace DNATools
         /// <param name="newSeq">sequence to assign to DNA object</param>
         public DNA(string newSeq)
         {
-            Sequence = newSeq.ToLower();
+            Sequence = newSeq.ToUpper();
             this.Clean();
+        }
+
+        //constructor for when instance tries to be created without a string input
+        protected DNA()
+        {
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -29,12 +34,12 @@ namespace DNATools
         public DNA Complement()
         {
             string origin = Sequence;
-            origin = origin.Replace('a', 'b');
-            origin = origin.Replace('t', 'a');
-            origin = origin.Replace('b', 't');
-            origin = origin.Replace('g', 'b');
-            origin = origin.Replace('c', 'g');
-            origin = origin.Replace('b', 'c');
+            origin = origin.Replace('A', 'B');
+            origin = origin.Replace('T', 'A');
+            origin = origin.Replace('B', 'T');
+            origin = origin.Replace('G', 'B');
+            origin = origin.Replace('C', 'G');
+            origin = origin.Replace('B', 'C');
             
             return new DNA(origin);
         }
@@ -72,7 +77,7 @@ namespace DNATools
         /// <returns>A string of the protein sequence</returns>
         public string Translate()
         {
-            string seq = Sequence.ToUpper();
+            string seq = Sequence;
             int length = seq.Length;
 
             //chop end of sequence to make base3,
@@ -142,11 +147,27 @@ namespace DNATools
             return returnStr;
         }
 
+        /// <summary>
+        /// Removes all non-alpha characters and converts to uppercase
+        /// </summary>
+        /// <returns>A string of the sequence post cleaning</returns>
         private string Clean()
         {
-            string startText = Sequence;
-            string returnText = Regex.Replace(startText, @"\P{L}", string.Empty);  // \P{L} is match any point (p) that is a letter (L)
+            string startText = Sequence.ToUpper();
+            string returnText = Regex.Replace(startText, @"\P{L}", string.Empty);  // \P{L} is match any point (p) that is a letter (L)uuuu
             return returnText;
+
+        }
+
+        /// <summary>
+        /// Gets the gc fraction of the sequence
+        /// </summary>
+        /// <returns>A fraction double of the gc content (not a %)</returns>
+        public double GcFraction()
+        {
+            var countC = Sequence.Count(c => c == 'C');
+            var countG = Sequence.Count(c => c == 'G');
+            return Math.Round((countC + countG) / (double)Sequence.Length, 3);
         }
     }
 }
