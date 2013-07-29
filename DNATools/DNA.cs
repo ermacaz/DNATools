@@ -5,9 +5,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 
+/********************
+ * Matt Hamada
+ * Sequence Tools
+ * 2013
+ * DNA.cs
+ * ******************/
 namespace DNATools
 {
-    class DNA
+    /// <summary>
+    /// DNA class. Holds DNA sequence. Can output sequences complement,
+    /// reverse, parallel, gc fraction, and protein translation.
+    /// </summary>
+    public class DNA
     {
         public string Sequence { get; set; }
         
@@ -152,7 +162,7 @@ namespace DNATools
         /// Removes all non-alpha characters and converts to uppercase
         /// </summary>
         /// <returns>A string of the sequence post cleaning</returns>
-        protected string Clean()
+        public string Clean()
         {
             string startText = Sequence.ToUpper();
             string returnText = Regex.Replace(startText, @"\P{L}", string.Empty);  // \P{L} is match any point (p) that is a letter (L)uuuu

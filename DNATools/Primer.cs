@@ -3,10 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+/********************
+ * Matt Hamada
+ * Sequence Tools
+ * 2013
+ * Primer.cs
+ * ******************/
 namespace DNATools
 {
-    class Primer : DNA
+    /// <summary>
+    /// Primer class is a subclass of DNA class.  Can calculate its Tm.
+    /// </summary>
+    public class Primer : DNA
     {
         public Primer(string seq)
         {
