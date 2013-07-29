@@ -30,8 +30,8 @@ namespace DNATools
         /// <summary>
         /// Complements DNA sequence ATG => TAC
         /// </summary>
-        /// <returns>A DNA object with a complemented sequence</returns>
-        public DNA Complement()
+        /// <returns>A string with a complemented sequence</returns>
+        public string Complement()
         {
             string origin = Sequence;
             origin = origin.Replace('A', 'B');
@@ -41,14 +41,14 @@ namespace DNATools
             origin = origin.Replace('C', 'G');
             origin = origin.Replace('B', 'C');
             
-            return new DNA(origin);
+            return origin;
         }
 
         /// <summary>
         /// Reverse DNA sequence ATG => GTA
         /// </summary>
-        /// <returns>A DNA object with the reverse sequence</returns>
-        public DNA Reverse()
+        /// <returns>A string with the reverse sequence</returns>
+        public string Reverse()
         {
             string origin = Sequence;
             int length = origin.Length;
@@ -58,16 +58,17 @@ namespace DNATools
                 returnArray[i] = origin[length - 1 - i];
             }
             string returnStr = new string(returnArray);
-            return new DNA(returnStr);
+            return returnStr;
         }
 
         /// <summary>
         /// Reverse and complement DNA sequence
         /// </summary>
-        /// <returns>A DNA object with the parallel sequence</returns>
-        public DNA Parallel()
+        /// <returns>A string with the parallel sequence</returns>
+        public string Parallel()
         {
-          return this.Reverse().Complement();
+            DNA temp = new DNA(this.Reverse());
+          return temp.Complement();
         }
 
         /// <summary>
@@ -151,7 +152,7 @@ namespace DNATools
         /// Removes all non-alpha characters and converts to uppercase
         /// </summary>
         /// <returns>A string of the sequence post cleaning</returns>
-        private string Clean()
+        protected string Clean()
         {
             string startText = Sequence.ToUpper();
             string returnText = Regex.Replace(startText, @"\P{L}", string.Empty);  // \P{L} is match any point (p) that is a letter (L)uuuu
@@ -169,5 +170,7 @@ namespace DNATools
             var countG = Sequence.Count(c => c == 'G');
             return Math.Round((countC + countG) / (double)Sequence.Length, 3);
         }
+
+
     }
 }
