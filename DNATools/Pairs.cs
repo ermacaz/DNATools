@@ -18,6 +18,12 @@ namespace DNATools
     {
         public ReEnzyme EnzF { get; set; }
         public ReEnzyme EnzR { get; set; }
+
+        public EnzPair(ReEnzyme forward, ReEnzyme reverse)
+        {
+            EnzF = forward;
+            EnzR = reverse;
+        }
     }
 
 
@@ -27,11 +33,19 @@ namespace DNATools
     /// </summary>
     public class PrimPair
     {
+        public Primer PrimF { get; set; }
+        public Primer PrimR { get; set; }
+        public ReEnzyme EnzF { get; set; }
+        public ReEnzyme EnzR { get; set; }
 
-        public string PrimF { get; set; }
-        public string PrimR { get; set; }
-        public string EnzF { get; set; }
-        public string EnzR { get; set; }
+        public PrimPair(Primer pForward, Primer pReverse, ReEnzyme eForward, ReEnzyme eReverse)
+        {
+            PrimF = pForward;
+            PrimR = pReverse;
+            EnzF = eForward;
+            EnzR = eReverse;
+        }
+        
     }
 
     /// <summary>
@@ -42,6 +56,13 @@ namespace DNATools
         public PrimPair Pair { get; set; }
         public double TmF { get; set; }
         public double TmR { get; set; }
+
+        public PTpairs(PrimPair ptPair, double tmf, double tmr)
+        {
+            Pair = ptPair;
+            TmF = tmf;
+            TmR = tmr;
+        }
     }
 
 

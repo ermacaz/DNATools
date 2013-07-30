@@ -31,12 +31,12 @@ namespace DNATools
         //takes in list of enzymes in 5-3 order, returns all possible pairs obeying 5->3
         public static List<EnzPair> Pairzymes(List<ReEnzyme> inList, bool singles)
         {
-            List<EnzPair> returnList = (from i in inList from j in inList where j == i && singles == false select new EnzPair { EnzF = i, EnzR = j }).ToList();
+            List<EnzPair> returnList = (from i in inList from j in inList where j == i && singles == false select new EnzPair(i, j)).ToList();
             foreach (ReEnzyme i in inList)
             {
                 for (int j = inList.IndexOf(i) + 1; j < inList.Count; j++)
                 {
-                    EnzPair temp = new EnzPair { EnzF = i, EnzR = inList[j] };
+                    EnzPair temp = new EnzPair(i, inList[j]);
                     returnList.Add(temp);
                 }
             }
@@ -45,19 +45,22 @@ namespace DNATools
         //takes in list of enzymes in 5-3 order, returns all possible pairs obeying 5->3
         public static List<EnzPair> PairzymesSeparate(List<ReEnzyme> forwards, List<ReEnzyme> reverses)
         {
-            return (from i in forwards from j in reverses select new EnzPair { EnzF = i, EnzR = j }).ToList();
+            return (from i in forwards from j in reverses select new EnzPair(i,j)).ToList();
         }
 
         //creates list of primer pairs
         public static List<PrimPair> PairPrimers(List<EnzPair> enzPairs, string pForward, string pReverse, int gcSize)
         {
             string gCclamp = (String.Concat(Enumerable.Repeat("GC", gcSize).ToArray()));
-            return enzPairs.Select(pair => new PrimPair { PrimF = gCclamp + pair.EnzF.CutSequence + pForward, PrimR = gCclamp + pair.EnzR.CutSequence + pReverse, EnzF = pair.EnzF.Name, EnzR = pair.EnzR.Name }).ToList();
+            return enzPairs.Select(pair => new PrimPair(new Primer(gCclamp + pair.EnzF.CutSequence + pForward),
+                                                        new Primer(gCclamp + pair.EnzR.CutSequence + pReverse),
+                                                        pair.EnzF,
+                                                        pair.EnzR)).ToList();
         }
         //create a list of P_Tpairs which contain primers, tms, and enzymes used
         public static List<PTpairs> PairFinal(List<PrimPair> primerPairs, double na)
         {
-            return primerPairs.Select(pair => new PTpairs { Pair = pair, TmF = TmCalc.Tm(pair.PrimF, na), TmR = TmCalc.Tm(pair.PrimR, na) }).ToList();
+            return primerPairs.Select(pair => new PTpairs(pair, pair.PrimF.Tm(na), pair.PrimR.Tm(na))).ToList();
         }
 
         public static PTpairs BestPair(List<PTpairs> pairs)
