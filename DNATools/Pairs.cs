@@ -35,7 +35,7 @@ namespace DNATools
     }
 
     /// <summary>
-    /// Hold a primer pair and their Tms
+    /// Hold a primer pair and their Tms.
     /// </summary>
     public class PTpairs
     {
