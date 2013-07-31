@@ -91,22 +91,45 @@ namespace DNATools
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
+            if (lstLibrary.SelectedItem != null)
+                lstUserPicks.Items.Add(lstLibrary.SelectedItem); 
         }
 
         private void btnUp_Click(object sender, EventArgs e)
         {
+            if (lstUserPicks.SelectedIndex > 0)
+            {
+                int currentIndex = lstUserPicks.SelectedIndex;
+                int newindex = lstUserPicks.SelectedIndex - 1;
+                string name = (string)lstUserPicks.Items[lstUserPicks.SelectedIndex];
+                string swapName = (string)lstUserPicks.Items[currentIndex - 1];
+                if (newindex < lstUserPicks.Items.Count)
+                {
+                    lstUserPicks.Items[newindex] = name;
+                    lstUserPicks.Items[lstUserPicks.SelectedIndex] = swapName;
+                    lstUserPicks.SelectedIndex -= 1;
+                }
 
+            }
         }
 
         private void btnDown_Click(object sender, EventArgs e)
         {
-
+            int currentIndex = lstUserPicks.SelectedIndex;
+            int newindex = lstUserPicks.SelectedIndex + 1;
+            string name = (string)lstUserPicks.Items[lstUserPicks.SelectedIndex];
+            if (newindex < lstUserPicks.Items.Count && newindex <= lstUserPicks.Items.Count)
+            {
+                string swapName = (string)lstUserPicks.Items[currentIndex + 1];
+                lstUserPicks.Items[newindex] = name;
+                lstUserPicks.Items[lstUserPicks.SelectedIndex] = swapName;
+                lstUserPicks.SelectedIndex += 1;
+            }
         }
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
-
+            lstUserPicks.Items.Remove(lstUserPicks.SelectedItem);
         }
 
         private void cbxSingleCut_CheckedChanged(object sender, EventArgs e)
@@ -116,7 +139,10 @@ namespace DNATools
 
         private void cbxGC_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (cbxGC.Checked == false)
+                gcClampSize.ReadOnly = true;
+            if (cbxGC.Checked)
+                gcClampSize.ReadOnly = false;
         }
 
         private void gcClampSize_TextChanged(object sender, EventArgs e)
@@ -134,11 +160,21 @@ namespace DNATools
 
         }
 
-        private void rtxtSequence_TextChanged(object sender, EventArgs e)
-        {
+        
 
+        private void lstUserPicks_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lstUserPicks.Items.Remove(lstUserPicks.SelectedItem);
         }
 
+        private void rtxtSequence_Click(object sender, EventArgs e)
+        {
+            if (rtxtSequence.Text == @"Enter Sequence Here")
+            {
+                rtxtSequence.Clear();
+                rtxtSequence.Focus();
+            }
+        }
        
 
 

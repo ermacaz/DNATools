@@ -434,7 +434,7 @@
             this.rtxtSequence.Size = new System.Drawing.Size(392, 186);
             this.rtxtSequence.TabIndex = 84;
             this.rtxtSequence.Text = "Enter Sequence Here";
-            this.rtxtSequence.TextChanged += new System.EventHandler(this.rtxtSequence_TextChanged);
+            this.rtxtSequence.Click += new System.EventHandler(this.rtxtSequence_Click);
             // 
             // btnUp
             // 
@@ -483,6 +483,7 @@
             this.lstUserPicks.Name = "lstUserPicks";
             this.lstUserPicks.Size = new System.Drawing.Size(114, 225);
             this.lstUserPicks.TabIndex = 79;
+            this.lstUserPicks.SelectedIndexChanged += new System.EventHandler(this.lstUserPicks_SelectedIndexChanged);
             // 
             // frmDigestPrimers
             // 
