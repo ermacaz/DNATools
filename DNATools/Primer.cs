@@ -22,7 +22,7 @@ namespace DNATools
             this.Clean();
         }
 
-        public string ToString()
+        public override string ToString()
         {
             return Sequence;
         }
