@@ -231,7 +231,7 @@ namespace DNATools
             //generate primer base from sequence
             string seqF = seq.Substring(0, int.Parse(txtBaseNum.Text));
             txtFPrimer.Text = seqF;
-            string seqR = new DNA(seq).Complement().Substring(int.Parse(txtBaseNum.Text));
+            string seqR = new DNA(seq).Complement().Substring(0, int.Parse(txtBaseNum.Text));
             txtRPrimer.Text = seqR;
 
             //make list of enzyme objects based on enzymes added to listbox
@@ -257,8 +257,8 @@ namespace DNATools
             txtRPrimer.Text = Regex.Replace(best.Pair.PrimR.Sequence, ".{3}", "$0 ").ToUpper();
             txtFTemp.Text = Math.Round(best.TmF, 2).ToString(CultureInfo.InvariantCulture);
             txtRTemp.Text = Math.Round(best.TmR, 2).ToString(CultureInfo.InvariantCulture);
-            txtFEnzyme.Text = best.Pair.EnzF.ToString();
-            txtREnzyme.Text = best.Pair.EnzR.ToString();
+            txtFEnzyme.Text = best.Pair.EnzF.Name;
+            txtREnzyme.Text = best.Pair.EnzR.Name;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)

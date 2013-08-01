@@ -16,10 +16,8 @@ namespace DNATools
     /// </summary>
     public class Primer : DNA
     {
-        public Primer(string seq)
+        public Primer(string newSeq) :base(newSeq)
         {
-            Sequence = seq;
-            this.Clean();
         }
 
         public override string ToString()

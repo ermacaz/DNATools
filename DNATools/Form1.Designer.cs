@@ -63,7 +63,7 @@
             this.txtBaseNum.Name = "txtBaseNum";
             this.txtBaseNum.Size = new System.Drawing.Size(44, 20);
             this.txtBaseNum.TabIndex = 105;
-            this.txtBaseNum.Text = "9";
+            this.txtBaseNum.Text = "12";
             this.txtBaseNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtBaseNum.TextChanged += new System.EventHandler(this.txtBaseNum_TextChanged);
             // 
@@ -82,7 +82,7 @@
             this.gcClampSize.Name = "gcClampSize";
             this.gcClampSize.Size = new System.Drawing.Size(36, 20);
             this.gcClampSize.TabIndex = 103;
-            this.gcClampSize.Text = "3";
+            this.gcClampSize.Text = "2";
             this.gcClampSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.gcClampSize.TextChanged += new System.EventHandler(this.gcClampSize_TextChanged);
             // 
