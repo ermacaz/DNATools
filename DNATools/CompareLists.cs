@@ -52,8 +52,8 @@ namespace DNATools
         public static List<PrimPair> PairPrimers(List<EnzPair> enzPairs, string pForward, string pReverse, int gcSize)
         {
             string gCclamp = (String.Concat(Enumerable.Repeat("GC", gcSize).ToArray()));
-            return enzPairs.Select(pair => new PrimPair(new Primer(gCclamp + pair.EnzF.CutSequence + pForward),
-                                                        new Primer(gCclamp + pair.EnzR.CutSequence + pReverse),
+            return enzPairs.Select(pair => new PrimPair(new Primer((gCclamp + pair.EnzF.CutSequence.Sequence + pForward)),
+                                                        new Primer((gCclamp + pair.EnzR.CutSequence.Sequence + pReverse)),
                                                         pair.EnzF,
                                                         pair.EnzR)).ToList();
         }
