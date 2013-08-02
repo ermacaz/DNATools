@@ -15,6 +15,12 @@ namespace DNATools
         public frmDNA()
         {
             InitializeComponent();
+            DNA current = new DNA("");
+        }
+
+        private void frmDNA_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

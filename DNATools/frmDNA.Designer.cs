@@ -28,191 +28,182 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SeqSize = new System.Windows.Forms.TextBox();
-            this.fromAminoAcidsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.kdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtNumBases = new System.Windows.Forms.TextBox();
+            this.mnuCalculateKdFromAA = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuCalculateKd = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuCalculateTm = new System.Windows.Forms.ToolStripMenuItem();
             this.calculateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fromAminoAcidsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.insertToMCSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.replaceGeneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.digestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuPrimerDigestInsertCS = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuPrimerDigestReplaceMCS = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuPrimersDigest = new System.Windows.Forms.ToolStripMenuItem();
             this.primersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.lowerCaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.allignToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cleanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.translateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.parallelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addSequenceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addTemplateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtDNASequence = new System.Windows.Forms.RichTextBox();
+            this.mnuSequenceLowcase = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuSequenceAlign = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuSequenceClean = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuSequenceTranslate = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuSequenceParallel = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuSequenceComplement = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuSequenceReverse = new System.Windows.Forms.ToolStripMenuItem();
             this.sequenceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.caseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.newSequenceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuSequenceUpcase = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuFileNew = new System.Windows.Forms.ToolStripMenuItem();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // SeqSize
+            // txtNumBases
             // 
-            this.SeqSize.Location = new System.Drawing.Point(521, 53);
-            this.SeqSize.Name = "SeqSize";
-            this.SeqSize.ReadOnly = true;
-            this.SeqSize.Size = new System.Drawing.Size(72, 20);
-            this.SeqSize.TabIndex = 6;
+            this.txtNumBases.Location = new System.Drawing.Point(521, 53);
+            this.txtNumBases.Name = "txtNumBases";
+            this.txtNumBases.ReadOnly = true;
+            this.txtNumBases.Size = new System.Drawing.Size(72, 20);
+            this.txtNumBases.TabIndex = 6;
             // 
-            // fromAminoAcidsToolStripMenuItem1
+            // mnuCalculateKdFromAA
             // 
-            this.fromAminoAcidsToolStripMenuItem1.Name = "fromAminoAcidsToolStripMenuItem1";
-            this.fromAminoAcidsToolStripMenuItem1.Size = new System.Drawing.Size(169, 22);
-            this.fromAminoAcidsToolStripMenuItem1.Text = "From amino acids";
+            this.mnuCalculateKdFromAA.Name = "mnuCalculateKdFromAA";
+            this.mnuCalculateKdFromAA.Size = new System.Drawing.Size(169, 22);
+            this.mnuCalculateKdFromAA.Text = "From amino acids";
             // 
-            // kdToolStripMenuItem
+            // mnuCalculateKd
             // 
-            this.kdToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fromAminoAcidsToolStripMenuItem1});
-            this.kdToolStripMenuItem.Name = "kdToolStripMenuItem";
-            this.kdToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
-            this.kdToolStripMenuItem.Text = "Kd";
+            this.mnuCalculateKd.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuCalculateKdFromAA});
+            this.mnuCalculateKd.Name = "mnuCalculateKd";
+            this.mnuCalculateKd.Size = new System.Drawing.Size(152, 22);
+            this.mnuCalculateKd.Text = "Kd";
             // 
-            // tmToolStripMenuItem
+            // mnuCalculateTm
             // 
-            this.tmToolStripMenuItem.Name = "tmToolStripMenuItem";
-            this.tmToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
-            this.tmToolStripMenuItem.Text = "Tm";
+            this.mnuCalculateTm.Name = "mnuCalculateTm";
+            this.mnuCalculateTm.Size = new System.Drawing.Size(152, 22);
+            this.mnuCalculateTm.Text = "Tm";
             // 
             // calculateToolStripMenuItem
             // 
             this.calculateToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tmToolStripMenuItem,
-            this.kdToolStripMenuItem});
+            this.mnuCalculateTm,
+            this.mnuCalculateKd});
             this.calculateToolStripMenuItem.Name = "calculateToolStripMenuItem";
             this.calculateToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
-            this.calculateToolStripMenuItem.Text = "Calculate";
+            this.calculateToolStripMenuItem.Text = "&Calculate";
             // 
-            // fromAminoAcidsToolStripMenuItem
+            // mnuPrimerDigestInsertCS
             // 
-            this.fromAminoAcidsToolStripMenuItem.Name = "fromAminoAcidsToolStripMenuItem";
-            this.fromAminoAcidsToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
-            this.fromAminoAcidsToolStripMenuItem.Text = "From amino acids";
+            this.mnuPrimerDigestInsertCS.Name = "mnuPrimerDigestInsertCS";
+            this.mnuPrimerDigestInsertCS.Size = new System.Drawing.Size(185, 22);
+            this.mnuPrimerDigestInsertCS.Text = "Insert to MCS";
             // 
-            // insertToMCSToolStripMenuItem
+            // mnuPrimerDigestReplaceMCS
             // 
-            this.insertToMCSToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fromAminoAcidsToolStripMenuItem});
-            this.insertToMCSToolStripMenuItem.Name = "insertToMCSToolStripMenuItem";
-            this.insertToMCSToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.insertToMCSToolStripMenuItem.Text = "Insert to MCS";
+            this.mnuPrimerDigestReplaceMCS.Name = "mnuPrimerDigestReplaceMCS";
+            this.mnuPrimerDigestReplaceMCS.Size = new System.Drawing.Size(185, 22);
+            this.mnuPrimerDigestReplaceMCS.Text = "Replace gene in MCS";
             // 
-            // replaceGeneToolStripMenuItem
+            // mnuPrimersDigest
             // 
-            this.replaceGeneToolStripMenuItem.Name = "replaceGeneToolStripMenuItem";
-            this.replaceGeneToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.replaceGeneToolStripMenuItem.Text = "Replace gene in MCS";
-            // 
-            // digestToolStripMenuItem
-            // 
-            this.digestToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.replaceGeneToolStripMenuItem,
-            this.insertToMCSToolStripMenuItem});
-            this.digestToolStripMenuItem.Name = "digestToolStripMenuItem";
-            this.digestToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
-            this.digestToolStripMenuItem.Text = "Digest";
+            this.mnuPrimersDigest.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuPrimerDigestReplaceMCS,
+            this.mnuPrimerDigestInsertCS});
+            this.mnuPrimersDigest.Name = "mnuPrimersDigest";
+            this.mnuPrimersDigest.Size = new System.Drawing.Size(107, 22);
+            this.mnuPrimersDigest.Text = "Digest";
             // 
             // primersToolStripMenuItem
             // 
             this.primersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.digestToolStripMenuItem});
+            this.mnuPrimersDigest});
             this.primersToolStripMenuItem.Name = "primersToolStripMenuItem";
             this.primersToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
-            this.primersToolStripMenuItem.Text = "Primers";
+            this.primersToolStripMenuItem.Text = "&Primers";
             // 
-            // richTextBox1
+            // txtDNASequence
             // 
-            this.richTextBox1.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(31, 53);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(484, 211);
-            this.richTextBox1.TabIndex = 5;
-            this.richTextBox1.Text = "";
+            this.txtDNASequence.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDNASequence.Location = new System.Drawing.Point(31, 53);
+            this.txtDNASequence.Name = "txtDNASequence";
+            this.txtDNASequence.Size = new System.Drawing.Size(484, 211);
+            this.txtDNASequence.TabIndex = 5;
+            this.txtDNASequence.Text = "";
             // 
-            // lowerCaseToolStripMenuItem
+            // mnuSequenceLowcase
             // 
-            this.lowerCaseToolStripMenuItem.Name = "lowerCaseToolStripMenuItem";
-            this.lowerCaseToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.lowerCaseToolStripMenuItem.Text = "Lower Case";
+            this.mnuSequenceLowcase.Name = "mnuSequenceLowcase";
+            this.mnuSequenceLowcase.Size = new System.Drawing.Size(144, 22);
+            this.mnuSequenceLowcase.Text = "Lower Case";
             // 
-            // allignToolStripMenuItem
+            // mnuSequenceAlign
             // 
-            this.allignToolStripMenuItem.Name = "allignToolStripMenuItem";
-            this.allignToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.allignToolStripMenuItem.Text = "Align";
+            this.mnuSequenceAlign.Name = "mnuSequenceAlign";
+            this.mnuSequenceAlign.Size = new System.Drawing.Size(144, 22);
+            this.mnuSequenceAlign.Text = "Align";
             // 
-            // cleanToolStripMenuItem
+            // mnuSequenceClean
             // 
-            this.cleanToolStripMenuItem.Name = "cleanToolStripMenuItem";
-            this.cleanToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.cleanToolStripMenuItem.Text = "Clean";
+            this.mnuSequenceClean.Name = "mnuSequenceClean";
+            this.mnuSequenceClean.Size = new System.Drawing.Size(144, 22);
+            this.mnuSequenceClean.Text = "Clean";
             // 
-            // translateToolStripMenuItem
+            // mnuSequenceTranslate
             // 
-            this.translateToolStripMenuItem.Name = "translateToolStripMenuItem";
-            this.translateToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.translateToolStripMenuItem.Text = "Translate";
+            this.mnuSequenceTranslate.Name = "mnuSequenceTranslate";
+            this.mnuSequenceTranslate.Size = new System.Drawing.Size(144, 22);
+            this.mnuSequenceTranslate.Text = "Translate";
             // 
-            // parallelToolStripMenuItem
+            // mnuSequenceParallel
             // 
-            this.parallelToolStripMenuItem.Name = "parallelToolStripMenuItem";
-            this.parallelToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.parallelToolStripMenuItem.Text = "Parallel";
+            this.mnuSequenceParallel.Name = "mnuSequenceParallel";
+            this.mnuSequenceParallel.Size = new System.Drawing.Size(144, 22);
+            this.mnuSequenceParallel.Text = "Parallel";
             // 
-            // addSequenceToolStripMenuItem
+            // mnuSequenceComplement
             // 
-            this.addSequenceToolStripMenuItem.Name = "addSequenceToolStripMenuItem";
-            this.addSequenceToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.addSequenceToolStripMenuItem.Text = "Complement";
+            this.mnuSequenceComplement.Name = "mnuSequenceComplement";
+            this.mnuSequenceComplement.Size = new System.Drawing.Size(144, 22);
+            this.mnuSequenceComplement.Text = "Complement";
             // 
-            // addTemplateToolStripMenuItem
+            // mnuSequenceReverse
             // 
-            this.addTemplateToolStripMenuItem.Name = "addTemplateToolStripMenuItem";
-            this.addTemplateToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.addTemplateToolStripMenuItem.Text = "Reverse";
+            this.mnuSequenceReverse.Name = "mnuSequenceReverse";
+            this.mnuSequenceReverse.Size = new System.Drawing.Size(144, 22);
+            this.mnuSequenceReverse.Text = "Reverse";
             // 
             // sequenceToolStripMenuItem
             // 
             this.sequenceToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addTemplateToolStripMenuItem,
-            this.addSequenceToolStripMenuItem,
-            this.parallelToolStripMenuItem,
-            this.translateToolStripMenuItem,
-            this.cleanToolStripMenuItem,
-            this.allignToolStripMenuItem,
-            this.caseToolStripMenuItem,
-            this.lowerCaseToolStripMenuItem});
+            this.mnuSequenceReverse,
+            this.mnuSequenceComplement,
+            this.mnuSequenceParallel,
+            this.mnuSequenceTranslate,
+            this.mnuSequenceClean,
+            this.mnuSequenceAlign,
+            this.mnuSequenceUpcase,
+            this.mnuSequenceLowcase});
             this.sequenceToolStripMenuItem.Name = "sequenceToolStripMenuItem";
             this.sequenceToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
-            this.sequenceToolStripMenuItem.Text = "Sequence";
+            this.sequenceToolStripMenuItem.Text = "&Sequence";
             // 
-            // caseToolStripMenuItem
+            // mnuSequenceUpcase
             // 
-            this.caseToolStripMenuItem.Name = "caseToolStripMenuItem";
-            this.caseToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.caseToolStripMenuItem.Text = "Upper Case";
+            this.mnuSequenceUpcase.Name = "mnuSequenceUpcase";
+            this.mnuSequenceUpcase.Size = new System.Drawing.Size(144, 22);
+            this.mnuSequenceUpcase.Text = "Upper Case";
             // 
-            // newSequenceToolStripMenuItem
+            // mnuFileNew
             // 
-            this.newSequenceToolStripMenuItem.Name = "newSequenceToolStripMenuItem";
-            this.newSequenceToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.newSequenceToolStripMenuItem.Text = "New Sequence";
+            this.mnuFileNew.Name = "mnuFileNew";
+            this.mnuFileNew.Size = new System.Drawing.Size(152, 22);
+            this.mnuFileNew.Text = "&New Sequence";
             // 
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newSequenceToolStripMenuItem});
+            this.mnuFileNew});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.fileToolStripMenuItem.Text = "File";
+            this.fileToolStripMenuItem.Text = "&File";
             // 
             // menuStrip2
             // 
@@ -232,11 +223,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(605, 301);
-            this.Controls.Add(this.SeqSize);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.txtNumBases);
+            this.Controls.Add(this.txtDNASequence);
             this.Controls.Add(this.menuStrip2);
             this.Name = "frmDNA";
             this.Text = "frmDNA";
+            this.Load += new System.EventHandler(this.frmDNA_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.ResumeLayout(false);
@@ -246,27 +238,26 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox SeqSize;
-        private System.Windows.Forms.ToolStripMenuItem fromAminoAcidsToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem kdToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tmToolStripMenuItem;
+        private System.Windows.Forms.TextBox txtNumBases;
+        private System.Windows.Forms.ToolStripMenuItem mnuCalculateKdFromAA;
+        private System.Windows.Forms.ToolStripMenuItem mnuCalculateKd;
+        private System.Windows.Forms.ToolStripMenuItem mnuCalculateTm;
         private System.Windows.Forms.ToolStripMenuItem calculateToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem fromAminoAcidsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem insertToMCSToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem replaceGeneToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem digestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mnuPrimerDigestInsertCS;
+        private System.Windows.Forms.ToolStripMenuItem mnuPrimerDigestReplaceMCS;
+        private System.Windows.Forms.ToolStripMenuItem mnuPrimersDigest;
         private System.Windows.Forms.ToolStripMenuItem primersToolStripMenuItem;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.ToolStripMenuItem lowerCaseToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem allignToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cleanToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem translateToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem parallelToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addSequenceToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addTemplateToolStripMenuItem;
+        private System.Windows.Forms.RichTextBox txtDNASequence;
+        private System.Windows.Forms.ToolStripMenuItem mnuSequenceLowcase;
+        private System.Windows.Forms.ToolStripMenuItem mnuSequenceAlign;
+        private System.Windows.Forms.ToolStripMenuItem mnuSequenceClean;
+        private System.Windows.Forms.ToolStripMenuItem mnuSequenceTranslate;
+        private System.Windows.Forms.ToolStripMenuItem mnuSequenceParallel;
+        private System.Windows.Forms.ToolStripMenuItem mnuSequenceComplement;
+        private System.Windows.Forms.ToolStripMenuItem mnuSequenceReverse;
         private System.Windows.Forms.ToolStripMenuItem sequenceToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem caseToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem newSequenceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mnuSequenceUpcase;
+        private System.Windows.Forms.ToolStripMenuItem mnuFileNew;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip2;
     }
