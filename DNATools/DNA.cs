@@ -162,11 +162,12 @@ namespace DNATools
         /// Removes all non-alpha characters and converts to uppercase
         /// </summary>
         /// <returns>A string of the sequence post cleaning</returns>
-        public string Clean()
+        public void Clean()
         {
             string startText = Sequence.ToUpper();
             string returnText = Regex.Replace(startText, @"\P{L}", string.Empty);  // \P{L} is match any point (p) that is a letter (L)uuuu
-            return returnText;
+            returnText = Regex.Replace(returnText, @"[^AGTC]", string.Empty); //remove inalid letters
+            Sequence = returnText;
 
         }
 
