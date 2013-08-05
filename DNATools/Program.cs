@@ -26,7 +26,7 @@ namespace DNATools
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmDNA());
+            Application.Run(new frmMain());
         }
     }
 }

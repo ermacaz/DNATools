@@ -65,7 +65,6 @@
             this.txtBaseNum.TabIndex = 105;
             this.txtBaseNum.Text = "12";
             this.txtBaseNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtBaseNum.TextChanged += new System.EventHandler(this.txtBaseNum_TextChanged);
             // 
             // label8
             // 
@@ -84,7 +83,6 @@
             this.gcClampSize.TabIndex = 103;
             this.gcClampSize.Text = "2";
             this.gcClampSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gcClampSize.TextChanged += new System.EventHandler(this.gcClampSize_TextChanged);
             // 
             // cbxGC
             // 
@@ -319,7 +317,6 @@
             this.txtNa.TabIndex = 97;
             this.txtNa.Text = "50";
             this.txtNa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtNa.TextChanged += new System.EventHandler(this.txtNa_TextChanged);
             // 
             // cbxSingleCut
             // 

@@ -64,6 +64,18 @@
     <Compile Include="frmDNA.Designer.cs">
       <DependentUpon>frmDNA.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDNAmer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDNAmer.Designer.cs">
+      <DependentUpon>frmDNAmer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pairs.cs" />
     <Compile Include="Primer.cs" />
     <Compile Include="Program.cs" />
@@ -77,6 +89,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDNA.resx">
       <DependentUpon>frmDNA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDNAmer.resx">
+      <DependentUpon>frmDNAmer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -9,7 +9,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
-
+/********************
+ * Matt Hamada
+ * Sequence Tools
+ * 2013
+ * ReEnzyme.cs
+ * ******************/
 namespace DNATools
 {
     public partial class frmDigestPrimers : Form
@@ -148,21 +153,7 @@ namespace DNATools
             gcClampSize.ReadOnly = cbxGC.Checked == false;
         }
 
-        private void gcClampSize_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNa_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtBaseNum_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+      
         
 
         private void lstUserPicks_SelectedIndexChanged(object sender, EventArgs e)

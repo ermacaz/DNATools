@@ -13,10 +13,10 @@ namespace DNATools
     public partial class frmDNA : Form
     {
         DNA current = new DNA("");
-        public frmDNA()
+        public frmDNA(string titleText)
         {
             InitializeComponent();
-            
+            this.Text = titleText;
         }
 
         private void frmDNA_Load(object sender, EventArgs e)
@@ -33,8 +33,7 @@ namespace DNATools
 
         private void mnuFileNew_Click(object sender, EventArgs e)
         {
-            frmDNA newFrm = new frmDNA();
-            newFrm.Show();
+            
         }
 
         private void mnuSequenceReverse_Click(object sender, EventArgs e)
