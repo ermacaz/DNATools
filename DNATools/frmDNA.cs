@@ -87,6 +87,7 @@ namespace DNATools
         private void mnuPrimerDigestReplaceMCS_Click(object sender, EventArgs e)
         {
             frmDigestInsertReplace newfrm = new frmDigestInsertReplace(current.Sequence);
+            newfrm.Show();
         }
     }
 }

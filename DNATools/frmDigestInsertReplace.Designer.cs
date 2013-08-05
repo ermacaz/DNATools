@@ -581,6 +581,7 @@
             this.Controls.Add(this.lstEnzTop);
             this.Name = "frmDigestInsertReplace";
             this.Text = "v";
+            this.Load += new System.EventHandler(this.frmDigestInsertReplace_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

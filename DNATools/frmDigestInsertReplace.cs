@@ -18,6 +18,12 @@ namespace DNATools
         {
             InitializeComponent();
             rtxtSequence.Text = sequence;
+
+            //populate enzyme library list
+            foreach (var enzyme in ReEnzyme.EnzCol)
+            {
+                lstEnzLibrary.Items.Add(enzyme.Name);
+            }
         }
 
         private void btnAddTop_Click(object sender, EventArgs e)
@@ -194,6 +200,11 @@ namespace DNATools
             txtRTm.Text = Math.Round(best.TmR, 2).ToString(CultureInfo.InvariantCulture);
             txtFEnzyme.Text = best.Pair.EnzF.Name;
             txtREnzyme.Text = best.Pair.EnzR.Name;
+
+        }
+
+        private void frmDigestInsertReplace_Load(object sender, EventArgs e)
+        {
 
         }
 
