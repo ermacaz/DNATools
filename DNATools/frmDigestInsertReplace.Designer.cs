@@ -89,6 +89,7 @@
             this.btnUpbtm.TabIndex = 143;
             this.btnUpbtm.Text = "Move Up";
             this.btnUpbtm.UseVisualStyleBackColor = true;
+            this.btnUpbtm.Click += new System.EventHandler(this.btnUpbtm_Click);
             // 
             // btnRemoveBtm
             // 
@@ -98,6 +99,7 @@
             this.btnRemoveBtm.TabIndex = 142;
             this.btnRemoveBtm.Text = "Remove";
             this.btnRemoveBtm.UseVisualStyleBackColor = true;
+            this.btnRemoveBtm.Click += new System.EventHandler(this.btnRemoveBtm_Click);
             // 
             // btnDownBtm
             // 
@@ -107,6 +109,7 @@
             this.btnDownBtm.TabIndex = 141;
             this.btnDownBtm.Text = "Move Down";
             this.btnDownBtm.UseVisualStyleBackColor = true;
+            this.btnDownBtm.Click += new System.EventHandler(this.btnDownBtm_Click);
             // 
             // btnAddBtm
             // 
@@ -116,6 +119,7 @@
             this.btnAddBtm.TabIndex = 140;
             this.btnAddBtm.Text = "Add";
             this.btnAddBtm.UseVisualStyleBackColor = true;
+            this.btnAddBtm.Click += new System.EventHandler(this.btnAddBtm_Click);
             // 
             // lstEnzBtm
             // 
@@ -163,6 +167,7 @@
             this.cbxClamp.TabIndex = 135;
             this.cbxClamp.Text = "GC Clamp";
             this.cbxClamp.UseVisualStyleBackColor = true;
+            this.cbxClamp.CheckedChanged += new System.EventHandler(this.cbxClamp_CheckedChanged);
             // 
             // label7
             // 
@@ -427,6 +432,7 @@
             this.calcbutton.TabIndex = 125;
             this.calcbutton.Text = "Calculate";
             this.calcbutton.UseVisualStyleBackColor = true;
+            this.calcbutton.Click += new System.EventHandler(this.calcbutton_Click);
             // 
             // label2
             // 
@@ -485,6 +491,7 @@
             this.rtxtSequence.Size = new System.Drawing.Size(392, 186);
             this.rtxtSequence.TabIndex = 118;
             this.rtxtSequence.Text = "Enter Sequence Here";
+            this.rtxtSequence.Click += new System.EventHandler(this.rtxtSequence_Click);
             // 
             // btnMoveUpTop
             // 
@@ -494,6 +501,7 @@
             this.btnMoveUpTop.TabIndex = 117;
             this.btnMoveUpTop.Text = "Move Up";
             this.btnMoveUpTop.UseVisualStyleBackColor = true;
+            this.btnMoveUpTop.Click += new System.EventHandler(this.btnMoveUpTop_Click);
             // 
             // btnRemoveTop
             // 
@@ -503,6 +511,7 @@
             this.btnRemoveTop.TabIndex = 116;
             this.btnRemoveTop.Text = "Remove";
             this.btnRemoveTop.UseVisualStyleBackColor = true;
+            this.btnRemoveTop.Click += new System.EventHandler(this.btnRemoveTop_Click);
             // 
             // btnDownTop
             // 
@@ -512,6 +521,7 @@
             this.btnDownTop.TabIndex = 115;
             this.btnDownTop.Text = "Move Down";
             this.btnDownTop.UseVisualStyleBackColor = true;
+            this.btnDownTop.Click += new System.EventHandler(this.btnDownTop_Click);
             // 
             // btnAddTop
             // 
@@ -521,6 +531,7 @@
             this.btnAddTop.TabIndex = 114;
             this.btnAddTop.Text = "Add";
             this.btnAddTop.UseVisualStyleBackColor = true;
+            this.btnAddTop.Click += new System.EventHandler(this.btnAddTop_Click);
             // 
             // lstEnzTop
             // 

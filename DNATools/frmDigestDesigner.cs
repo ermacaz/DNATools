@@ -14,9 +14,11 @@ namespace DNATools
 {
     public partial class frmDigestPrimers : Form
     {
-        public frmDigestPrimers()
+        public frmDigestPrimers(string sequence)
         {
             InitializeComponent();
+            rtxtSequence.Text = sequence;
+
             ReEnzyme AatII = new ReEnzyme("AatII", "GACGTC");
             ReEnzyme Acc65I = new ReEnzyme("Acc65I", "GGTACC");
             ReEnzyme AciI = new ReEnzyme("AciI", "CCGC");
@@ -230,9 +232,7 @@ namespace DNATools
 
             //generate primer base from sequence
             string seqF = seq.Substring(0, int.Parse(txtBaseNum.Text));
-            txtFPrimer.Text = seqF;
             string seqR = new DNA(seq).Complement().Substring(0, int.Parse(txtBaseNum.Text));
-            txtRPrimer.Text = seqR;
 
             //make list of enzyme objects based on enzymes added to listbox
             List<string> enzymes = new List<string>();
@@ -311,10 +311,7 @@ namespace DNATools
 
         private void cbxGC_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbxGC.Checked == false)
-                gcClampSize.ReadOnly = true;
-            if (cbxGC.Checked)
-                gcClampSize.ReadOnly = false;
+            gcClampSize.ReadOnly = cbxGC.Checked == false;
         }
 
         private void gcClampSize_TextChanged(object sender, EventArgs e)

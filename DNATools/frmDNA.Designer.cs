@@ -72,13 +72,13 @@
             this.mnuCalculateKd.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuCalculateKdFromAA});
             this.mnuCalculateKd.Name = "mnuCalculateKd";
-            this.mnuCalculateKd.Size = new System.Drawing.Size(152, 22);
+            this.mnuCalculateKd.Size = new System.Drawing.Size(92, 22);
             this.mnuCalculateKd.Text = "Kd";
             // 
             // mnuCalculateTm
             // 
             this.mnuCalculateTm.Name = "mnuCalculateTm";
-            this.mnuCalculateTm.Size = new System.Drawing.Size(152, 22);
+            this.mnuCalculateTm.Size = new System.Drawing.Size(92, 22);
             this.mnuCalculateTm.Text = "Tm";
             // 
             // calculateToolStripMenuItem
@@ -102,6 +102,7 @@
             this.mnuPrimerDigestReplaceMCS.Name = "mnuPrimerDigestReplaceMCS";
             this.mnuPrimerDigestReplaceMCS.Size = new System.Drawing.Size(185, 22);
             this.mnuPrimerDigestReplaceMCS.Text = "Replace gene in MCS";
+            this.mnuPrimerDigestReplaceMCS.Click += new System.EventHandler(this.mnuPrimerDigestReplaceMCS_Click);
             // 
             // mnuPrimersDigest
             // 
@@ -133,7 +134,7 @@
             // mnuSequenceLowcase
             // 
             this.mnuSequenceLowcase.Name = "mnuSequenceLowcase";
-            this.mnuSequenceLowcase.Size = new System.Drawing.Size(152, 22);
+            this.mnuSequenceLowcase.Size = new System.Drawing.Size(144, 22);
             this.mnuSequenceLowcase.Text = "Lower Case";
             this.mnuSequenceLowcase.Click += new System.EventHandler(this.mnuSequenceLowcase_Click);
             // 
@@ -146,35 +147,35 @@
             // mnuSequenceClean
             // 
             this.mnuSequenceClean.Name = "mnuSequenceClean";
-            this.mnuSequenceClean.Size = new System.Drawing.Size(152, 22);
+            this.mnuSequenceClean.Size = new System.Drawing.Size(144, 22);
             this.mnuSequenceClean.Text = "Clean";
             this.mnuSequenceClean.Click += new System.EventHandler(this.mnuSequenceClean_Click);
             // 
             // mnuSequenceTranslate
             // 
             this.mnuSequenceTranslate.Name = "mnuSequenceTranslate";
-            this.mnuSequenceTranslate.Size = new System.Drawing.Size(152, 22);
+            this.mnuSequenceTranslate.Size = new System.Drawing.Size(144, 22);
             this.mnuSequenceTranslate.Text = "Translate";
             this.mnuSequenceTranslate.Click += new System.EventHandler(this.mnuSequenceTranslate_Click);
             // 
             // mnuSequenceParallel
             // 
             this.mnuSequenceParallel.Name = "mnuSequenceParallel";
-            this.mnuSequenceParallel.Size = new System.Drawing.Size(152, 22);
+            this.mnuSequenceParallel.Size = new System.Drawing.Size(144, 22);
             this.mnuSequenceParallel.Text = "Parallel";
             this.mnuSequenceParallel.Click += new System.EventHandler(this.mnuSequenceParallel_Click);
             // 
             // mnuSequenceComplement
             // 
             this.mnuSequenceComplement.Name = "mnuSequenceComplement";
-            this.mnuSequenceComplement.Size = new System.Drawing.Size(152, 22);
+            this.mnuSequenceComplement.Size = new System.Drawing.Size(144, 22);
             this.mnuSequenceComplement.Text = "Complement";
             this.mnuSequenceComplement.Click += new System.EventHandler(this.mnuSequenceComplement_Click);
             // 
             // mnuSequenceReverse
             // 
             this.mnuSequenceReverse.Name = "mnuSequenceReverse";
-            this.mnuSequenceReverse.Size = new System.Drawing.Size(152, 22);
+            this.mnuSequenceReverse.Size = new System.Drawing.Size(144, 22);
             this.mnuSequenceReverse.Text = "Reverse";
             this.mnuSequenceReverse.Click += new System.EventHandler(this.mnuSequenceReverse_Click);
             // 
@@ -197,7 +198,7 @@
             // mnuSequenceUpcase
             // 
             this.mnuSequenceUpcase.Name = "mnuSequenceUpcase";
-            this.mnuSequenceUpcase.Size = new System.Drawing.Size(152, 22);
+            this.mnuSequenceUpcase.Size = new System.Drawing.Size(144, 22);
             this.mnuSequenceUpcase.Text = "Upper Case";
             this.mnuSequenceUpcase.Click += new System.EventHandler(this.mnuSequenceUpcase_Click);
             // 

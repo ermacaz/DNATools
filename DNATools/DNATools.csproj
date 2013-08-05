@@ -52,6 +52,12 @@
     <Compile Include="frmDigestDesigner.Designer.cs">
       <DependentUpon>frmDigestDesigner.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDigestInsertReplace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDigestInsertReplace.Designer.cs">
+      <DependentUpon>frmDigestInsertReplace.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDNA.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +71,9 @@
     <Compile Include="ReEnzyme.cs" />
     <EmbeddedResource Include="frmDigestDesigner.resx">
       <DependentUpon>frmDigestDesigner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDigestInsertReplace.resx">
+      <DependentUpon>frmDigestInsertReplace.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDNA.resx">
       <DependentUpon>frmDNA.cs</DependentUpon>
