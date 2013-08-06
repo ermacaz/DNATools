@@ -19,6 +19,13 @@ namespace DNATools
             this.Text = titleText;
         }
 
+        public frmDNA(string titleText, string nameExtension)
+        {
+            InitializeComponent();
+            this.Text = nameExtension;
+        }
+
+
         private void frmDNA_Load(object sender, EventArgs e)
         {
 
@@ -38,7 +45,9 @@ namespace DNATools
 
         private void mnuSequenceReverse_Click(object sender, EventArgs e)
         {
-            txtDNASequence.Text = current.Reverse();
+            frmDNA newfrm = new frmDNA(current.Reverse(), this.Text + @"-Reverse");
+            newfrm.MdiParent = this.MdiParent;
+            newfrm.Show();
         }
 
         private void mnuSequenceComplement_Click(object sender, EventArgs e)
