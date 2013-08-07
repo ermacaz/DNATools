@@ -52,17 +52,23 @@ namespace DNATools
 
         private void mnuSequenceComplement_Click(object sender, EventArgs e)
         {
-            txtDNASequence.Text = current.Complement();
+            frmDNA newfrm = new frmDNA(current.Complement(), this.Text + @"-Complement");
+            newfrm.MdiParent = this.MdiParent;
+            newfrm.Show();
         }
 
         private void mnuSequenceParallel_Click(object sender, EventArgs e)
         {
-            txtDNASequence.Text = current.Parallel();
+            frmDNA newfrm = new frmDNA(current.Parallel(), this.Text + @"-Reverse Complement");
+            newfrm.MdiParent = this.MdiParent;
+            newfrm.Show();
         }
 
         private void mnuSequenceTranslate_Click(object sender, EventArgs e)
         {
-            txtDNASequence.Text = current.Translate();
+            frmDNA newfrm = new frmDNA(current.Translate(), this.Text + @"-Translated");
+            newfrm.MdiParent = this.MdiParent;
+            newfrm.Show();
         }
 
         private void mnuSequenceClean_Click(object sender, EventArgs e)

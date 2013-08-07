@@ -40,16 +40,17 @@
             this.txtDNASequence = new System.Windows.Forms.RichTextBox();
             this.mnuSequenceLowcase = new System.Windows.Forms.ToolStripMenuItem();
             this.sequenceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuSequenceReverse = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuSequenceComplement = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuSequenceParallel = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuSequenceTranslate = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuSequenceClean = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuSequenceAlign = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuSequenceUpcase = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuFileNew = new System.Windows.Forms.ToolStripMenuItem();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.mnuSequenceUpcase = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuSequenceAlign = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuSequenceClean = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuSequenceTranslate = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuSequenceParallel = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuSequenceComplement = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuSequenceReverse = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,13 +73,13 @@
             this.mnuCalculateKd.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuCalculateKdFromAA});
             this.mnuCalculateKd.Name = "mnuCalculateKd";
-            this.mnuCalculateKd.Size = new System.Drawing.Size(92, 22);
+            this.mnuCalculateKd.Size = new System.Drawing.Size(152, 22);
             this.mnuCalculateKd.Text = "Kd";
             // 
             // mnuCalculateTm
             // 
             this.mnuCalculateTm.Name = "mnuCalculateTm";
-            this.mnuCalculateTm.Size = new System.Drawing.Size(92, 22);
+            this.mnuCalculateTm.Size = new System.Drawing.Size(152, 22);
             this.mnuCalculateTm.Text = "Tm";
             // 
             // calculateToolStripMenuItem
@@ -134,7 +135,8 @@
             // mnuSequenceLowcase
             // 
             this.mnuSequenceLowcase.Name = "mnuSequenceLowcase";
-            this.mnuSequenceLowcase.Size = new System.Drawing.Size(144, 22);
+            this.mnuSequenceLowcase.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L)));
+            this.mnuSequenceLowcase.Size = new System.Drawing.Size(187, 22);
             this.mnuSequenceLowcase.Text = "Lower Case";
             this.mnuSequenceLowcase.Click += new System.EventHandler(this.mnuSequenceLowcase_Click);
             // 
@@ -145,14 +147,69 @@
             this.mnuSequenceComplement,
             this.mnuSequenceParallel,
             this.mnuSequenceTranslate,
-            this.mnuSequenceClean,
             this.mnuSequenceAlign,
+            this.toolStripMenuItem1,
+            this.mnuSequenceClean,
             this.mnuSequenceUpcase,
             this.mnuSequenceLowcase});
             this.sequenceToolStripMenuItem.Name = "sequenceToolStripMenuItem";
             this.sequenceToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.sequenceToolStripMenuItem.Text = "&Sequence";
             this.sequenceToolStripMenuItem.Click += new System.EventHandler(this.sequenceToolStripMenuItem_Click);
+            // 
+            // mnuSequenceReverse
+            // 
+            this.mnuSequenceReverse.Name = "mnuSequenceReverse";
+            this.mnuSequenceReverse.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
+            this.mnuSequenceReverse.Size = new System.Drawing.Size(187, 22);
+            this.mnuSequenceReverse.Text = "Reverse";
+            this.mnuSequenceReverse.Click += new System.EventHandler(this.mnuSequenceReverse_Click);
+            // 
+            // mnuSequenceComplement
+            // 
+            this.mnuSequenceComplement.Name = "mnuSequenceComplement";
+            this.mnuSequenceComplement.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
+            this.mnuSequenceComplement.Size = new System.Drawing.Size(187, 22);
+            this.mnuSequenceComplement.Text = "Complement";
+            this.mnuSequenceComplement.Click += new System.EventHandler(this.mnuSequenceComplement_Click);
+            // 
+            // mnuSequenceParallel
+            // 
+            this.mnuSequenceParallel.Name = "mnuSequenceParallel";
+            this.mnuSequenceParallel.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
+            this.mnuSequenceParallel.Size = new System.Drawing.Size(187, 22);
+            this.mnuSequenceParallel.Text = "Parallel";
+            this.mnuSequenceParallel.Click += new System.EventHandler(this.mnuSequenceParallel_Click);
+            // 
+            // mnuSequenceTranslate
+            // 
+            this.mnuSequenceTranslate.Name = "mnuSequenceTranslate";
+            this.mnuSequenceTranslate.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
+            this.mnuSequenceTranslate.Size = new System.Drawing.Size(187, 22);
+            this.mnuSequenceTranslate.Text = "Translate";
+            this.mnuSequenceTranslate.Click += new System.EventHandler(this.mnuSequenceTranslate_Click);
+            // 
+            // mnuSequenceClean
+            // 
+            this.mnuSequenceClean.Name = "mnuSequenceClean";
+            this.mnuSequenceClean.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.K)));
+            this.mnuSequenceClean.Size = new System.Drawing.Size(187, 22);
+            this.mnuSequenceClean.Text = "Clean";
+            this.mnuSequenceClean.Click += new System.EventHandler(this.mnuSequenceClean_Click);
+            // 
+            // mnuSequenceAlign
+            // 
+            this.mnuSequenceAlign.Name = "mnuSequenceAlign";
+            this.mnuSequenceAlign.Size = new System.Drawing.Size(187, 22);
+            this.mnuSequenceAlign.Text = "Align";
+            // 
+            // mnuSequenceUpcase
+            // 
+            this.mnuSequenceUpcase.Name = "mnuSequenceUpcase";
+            this.mnuSequenceUpcase.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
+            this.mnuSequenceUpcase.Size = new System.Drawing.Size(187, 22);
+            this.mnuSequenceUpcase.Text = "Upper Case";
+            this.mnuSequenceUpcase.Click += new System.EventHandler(this.mnuSequenceUpcase_Click);
             // 
             // mnuFileNew
             // 
@@ -182,55 +239,10 @@
             this.menuStrip2.TabIndex = 4;
             this.menuStrip2.Text = "menuStrip2";
             // 
-            // mnuSequenceUpcase
+            // toolStripMenuItem1
             // 
-            this.mnuSequenceUpcase.Name = "mnuSequenceUpcase";
-            this.mnuSequenceUpcase.Size = new System.Drawing.Size(152, 22);
-            this.mnuSequenceUpcase.Text = "Upper Case";
-            this.mnuSequenceUpcase.Click += new System.EventHandler(this.mnuSequenceUpcase_Click);
-            // 
-            // mnuSequenceAlign
-            // 
-            this.mnuSequenceAlign.Name = "mnuSequenceAlign";
-            this.mnuSequenceAlign.Size = new System.Drawing.Size(152, 22);
-            this.mnuSequenceAlign.Text = "Align";
-            // 
-            // mnuSequenceClean
-            // 
-            this.mnuSequenceClean.Name = "mnuSequenceClean";
-            this.mnuSequenceClean.Size = new System.Drawing.Size(152, 22);
-            this.mnuSequenceClean.Text = "Clean";
-            this.mnuSequenceClean.Click += new System.EventHandler(this.mnuSequenceClean_Click);
-            // 
-            // mnuSequenceTranslate
-            // 
-            this.mnuSequenceTranslate.Name = "mnuSequenceTranslate";
-            this.mnuSequenceTranslate.Size = new System.Drawing.Size(152, 22);
-            this.mnuSequenceTranslate.Text = "Translate";
-            this.mnuSequenceTranslate.Click += new System.EventHandler(this.mnuSequenceTranslate_Click);
-            // 
-            // mnuSequenceParallel
-            // 
-            this.mnuSequenceParallel.Name = "mnuSequenceParallel";
-            this.mnuSequenceParallel.Size = new System.Drawing.Size(152, 22);
-            this.mnuSequenceParallel.Text = "Parallel";
-            this.mnuSequenceParallel.Click += new System.EventHandler(this.mnuSequenceParallel_Click);
-            // 
-            // mnuSequenceComplement
-            // 
-            this.mnuSequenceComplement.Name = "mnuSequenceComplement";
-            this.mnuSequenceComplement.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
-            this.mnuSequenceComplement.Size = new System.Drawing.Size(187, 22);
-            this.mnuSequenceComplement.Text = "Complement";
-            this.mnuSequenceComplement.Click += new System.EventHandler(this.mnuSequenceComplement_Click);
-            // 
-            // mnuSequenceReverse
-            // 
-            this.mnuSequenceReverse.Name = "mnuSequenceReverse";
-            this.mnuSequenceReverse.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
-            this.mnuSequenceReverse.Size = new System.Drawing.Size(187, 22);
-            this.mnuSequenceReverse.Text = "Reverse";
-            this.mnuSequenceReverse.Click += new System.EventHandler(this.mnuSequenceReverse_Click);
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(184, 6);
             // 
             // frmDNA
             // 
@@ -275,5 +287,6 @@
         private System.Windows.Forms.ToolStripMenuItem mnuSequenceClean;
         private System.Windows.Forms.ToolStripMenuItem mnuSequenceAlign;
         private System.Windows.Forms.ToolStripMenuItem mnuSequenceUpcase;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
     }
 }
