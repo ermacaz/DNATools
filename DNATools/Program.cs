@@ -12,6 +12,7 @@ namespace DNATools
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+
         [STAThread]
         static void Main()
         {
@@ -26,7 +27,9 @@ namespace DNATools
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMain());
+            //frmMain master = new frmMain();
+
+            Application.Run(master);
         }
     }
 }

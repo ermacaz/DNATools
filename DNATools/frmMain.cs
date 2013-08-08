@@ -39,5 +39,10 @@ namespace DNATools
         {
 
         }
+
+        private void lstDNAs_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

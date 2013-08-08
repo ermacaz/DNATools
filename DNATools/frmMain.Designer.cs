@@ -36,6 +36,7 @@
             this.mnuPrimersDigest = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuPrimerDigestReplaceMCS = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuPrimerDigestInsertCS = new System.Windows.Forms.ToolStripMenuItem();
+            this.lstDNAs = new System.Windows.Forms.ListBox();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,7 +82,7 @@
             this.mnuPrimerDigestReplaceMCS,
             this.mnuPrimerDigestInsertCS});
             this.mnuPrimersDigest.Name = "mnuPrimersDigest";
-            this.mnuPrimersDigest.Size = new System.Drawing.Size(152, 22);
+            this.mnuPrimersDigest.Size = new System.Drawing.Size(107, 22);
             this.mnuPrimersDigest.Text = "Digest";
             // 
             // mnuPrimerDigestReplaceMCS
@@ -96,11 +97,22 @@
             this.mnuPrimerDigestInsertCS.Size = new System.Drawing.Size(185, 22);
             this.mnuPrimerDigestInsertCS.Text = "Insert to MCS";
             // 
+            // lstDNAs
+            // 
+            this.lstDNAs.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lstDNAs.FormattingEnabled = true;
+            this.lstDNAs.Location = new System.Drawing.Point(0, 24);
+            this.lstDNAs.Name = "lstDNAs";
+            this.lstDNAs.Size = new System.Drawing.Size(120, 304);
+            this.lstDNAs.TabIndex = 7;
+            this.lstDNAs.SelectedIndexChanged += new System.EventHandler(this.lstDNAs_SelectedIndexChanged);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(797, 328);
+            this.Controls.Add(this.lstDNAs);
             this.Controls.Add(this.menuStrip2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
@@ -122,5 +134,6 @@
         private System.Windows.Forms.ToolStripMenuItem mnuPrimersDigest;
         private System.Windows.Forms.ToolStripMenuItem mnuPrimerDigestReplaceMCS;
         private System.Windows.Forms.ToolStripMenuItem mnuPrimerDigestInsertCS;
+        public System.Windows.Forms.ListBox lstDNAs;
     }
 }

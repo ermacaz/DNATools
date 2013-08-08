@@ -23,6 +23,8 @@ namespace DNATools
         {
             InitializeComponent();
             this.Text = nameExtension;
+            Program.master.lstDNAs.Items.Add(this);
+
         }
 
 
