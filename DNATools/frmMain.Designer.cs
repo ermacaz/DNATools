@@ -118,6 +118,7 @@
             this.IsMdiContainer = true;
             this.Name = "frmMain";
             this.Text = "DNA Tools";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.ResumeLayout(false);

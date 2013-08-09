@@ -12,17 +12,28 @@ namespace DNATools
 {
     public partial class frmDNAmer : Form
     {
-        public frmDNAmer()
+        private string strDNAme;
+        public frmMain frmMaster;
+        public frmDNAmer(frmMain frmParent)
         {
             InitializeComponent();
+            frmMaster = frmParent;
+
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            frmDNA newDNAFrm = new frmDNA(txtName.Text);
+            strDNAme = txtName.Text;
+            frmDNA newDNAFrm = new frmDNA(frmMaster, strDNAme);
             newDNAFrm.MdiParent = this.MdiParent;
             newDNAFrm.Show();
+            //frmMaster.lstDNAs.Items.Add(strDNAme);
             this.Close();
+        }
+
+        public override string ToString()
+        {
+            return strDNAme;
         }
 
        

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace DNATools
 {
     public partial class frmMain : Form
     {
+        public List<frmDNA> frmDNAobj= new List<frmDNA>();
         public frmMain()
         {
             InitializeComponent();
@@ -25,7 +27,7 @@ namespace DNATools
 
         private void mnuFileNew_Click(object sender, EventArgs e)
         {
-            frmDNAmer newFrm = new frmDNAmer();
+            frmDNAmer newFrm = new frmDNAmer(this);
             newFrm.MdiParent = this;
             newFrm.Show();
         }
@@ -41,6 +43,11 @@ namespace DNATools
         }
 
         private void lstDNAs_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
         {
 
         }

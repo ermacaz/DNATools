@@ -12,18 +12,26 @@ namespace DNATools
 {
     public partial class frmDNA : Form
     {
+
         DNA current = new DNA("");
-        public frmDNA(string titleText)
+        public frmMain frmMaster;
+        public frmDNA(frmMain master, string titleText)
         {
             InitializeComponent();
             this.Text = titleText;
+            frmMaster = master;
+            frmMaster.lstDNAs.Items.Add(this.Text);
+            frmMaster.frmDNAobj.Add(this);
         }
 
-        public frmDNA(string titleText, string nameExtension)
+        public frmDNA(frmMain master, string titleText, string nameExtension)
         {
             InitializeComponent();
             this.Text = nameExtension;
-            Program.master.lstDNAs.Items.Add(this);
+            frmMaster = master;
+            frmMaster.lstDNAs.Items.Add(this.Text);
+            frmMaster.frmDNAobj.Add(this);
+            
 
         }
 
@@ -47,28 +55,28 @@ namespace DNATools
 
         private void mnuSequenceReverse_Click(object sender, EventArgs e)
         {
-            frmDNA newfrm = new frmDNA(current.Reverse(), this.Text + @"-Reverse");
+            frmDNA newfrm = new frmDNA(frmMaster, current.Reverse(), this.Text + @"-Reverse");
             newfrm.MdiParent = this.MdiParent;
             newfrm.Show();
         }
 
         private void mnuSequenceComplement_Click(object sender, EventArgs e)
         {
-            frmDNA newfrm = new frmDNA(current.Complement(), this.Text + @"-Complement");
+            frmDNA newfrm = new frmDNA(frmMaster, current.Complement(), this.Text + @"-Complement");
             newfrm.MdiParent = this.MdiParent;
             newfrm.Show();
         }
 
         private void mnuSequenceParallel_Click(object sender, EventArgs e)
         {
-            frmDNA newfrm = new frmDNA(current.Parallel(), this.Text + @"-Reverse Complement");
+            frmDNA newfrm = new frmDNA(frmMaster, current.Parallel(), this.Text + @"-Reverse Complement");
             newfrm.MdiParent = this.MdiParent;
             newfrm.Show();
         }
 
         private void mnuSequenceTranslate_Click(object sender, EventArgs e)
         {
-            frmDNA newfrm = new frmDNA(current.Translate(), this.Text + @"-Translated");
+            frmDNA newfrm = new frmDNA(frmMaster, current.Translate(), this.Text + @"-Translated");
             newfrm.MdiParent = this.MdiParent;
             newfrm.Show();
         }
