@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -37,7 +38,12 @@
             this.mnuPrimerDigestReplaceMCS = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuPrimerDigestInsertCS = new System.Windows.Forms.ToolStripMenuItem();
             this.lstDNAs = new System.Windows.Forms.ListBox();
+            this.cmLstDNA = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.removeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cloneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
+            this.cmLstDNA.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip2
@@ -108,6 +114,36 @@
             this.lstDNAs.Size = new System.Drawing.Size(167, 304);
             this.lstDNAs.TabIndex = 7;
             this.lstDNAs.SelectedIndexChanged += new System.EventHandler(this.lstDNAs_SelectedIndexChanged);
+            this.lstDNAs.DoubleClick += new System.EventHandler(this.lstDNAs_DoubleClick);
+            // 
+            // cmLstDNA
+            // 
+            this.cmLstDNA.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.removeToolStripMenuItem,
+            this.cloneToolStripMenuItem,
+            this.saveToolStripMenuItem});
+            this.cmLstDNA.Name = "cmLstDNA";
+            this.cmLstDNA.Size = new System.Drawing.Size(153, 92);
+            // 
+            // removeToolStripMenuItem
+            // 
+            this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
+            this.removeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.removeToolStripMenuItem.Text = "Remove";
+            this.removeToolStripMenuItem.Click += new System.EventHandler(this.removeToolStripMenuItem_Click);
+            // 
+            // cloneToolStripMenuItem
+            // 
+            this.cloneToolStripMenuItem.Name = "cloneToolStripMenuItem";
+            this.cloneToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cloneToolStripMenuItem.Text = "Clone";
+            this.cloneToolStripMenuItem.Click += new System.EventHandler(this.cloneToolStripMenuItem_Click);
+            // 
+            // saveToolStripMenuItem
+            // 
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.saveToolStripMenuItem.Text = "Save";
             // 
             // frmMain
             // 
@@ -123,6 +159,7 @@
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
+            this.cmLstDNA.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,5 +175,9 @@
         private System.Windows.Forms.ToolStripMenuItem mnuPrimerDigestReplaceMCS;
         private System.Windows.Forms.ToolStripMenuItem mnuPrimerDigestInsertCS;
         public System.Windows.Forms.ListBox lstDNAs;
+        private System.Windows.Forms.ContextMenuStrip cmLstDNA;
+        private System.Windows.Forms.ToolStripMenuItem removeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cloneToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
     }
 }

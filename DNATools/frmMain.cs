@@ -18,6 +18,7 @@ namespace DNATools
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
             lstDNAs.DisplayMember = "strDNAme";
+            lstDNAs.ContextMenuStrip = cmLstDNA;
 
         }
 
@@ -49,6 +50,24 @@ namespace DNATools
         }
 
         private void frmMain_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lstDNAs_DoubleClick(object sender, EventArgs e)
+        {
+            frmDNA temp = (frmDNA)lstDNAs.SelectedItem;
+            temp.Activate();
+        }
+
+        private void removeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDNA temp  = (frmDNA)lstDNAs.SelectedItem;
+            temp.Close();
+            lstDNAs.Items.Remove(lstDNAs.SelectedItem);
+        }
+
+        private void cloneToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
