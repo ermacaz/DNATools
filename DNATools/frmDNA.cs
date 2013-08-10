@@ -31,7 +31,7 @@ namespace DNATools
             this.Text = nameExtension;
             strDNAme = nameExtension;
             frmMaster = master;
-            frmMaster.lstDNAs.Items.Add(this.Text);         
+            frmMaster.lstDNAs.Items.Add(this);         
 
         }
 
