@@ -57,6 +57,7 @@
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.txtName);
             this.Name = "frmDNAmer";
+            this.ShowIcon = false;
             this.Text = "Enter new DNA name";
             this.ResumeLayout(false);
             this.PerformLayout();

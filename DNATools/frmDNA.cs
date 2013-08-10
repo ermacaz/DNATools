@@ -15,23 +15,23 @@ namespace DNATools
 
         DNA current = new DNA("");
         public frmMain frmMaster;
+        public string strDNAme { get; set; }
         public frmDNA(frmMain master, string titleText)
         {
             InitializeComponent();
             this.Text = titleText;
+            strDNAme = titleText;
             frmMaster = master;
-            frmMaster.lstDNAs.Items.Add(this.Text);
-            frmMaster.frmDNAobj.Add(this);
+            frmMaster.lstDNAs.Items.Add(this);
         }
 
         public frmDNA(frmMain master, string titleText, string nameExtension)
         {
             InitializeComponent();
             this.Text = nameExtension;
+            strDNAme = nameExtension;
             frmMaster = master;
-            frmMaster.lstDNAs.Items.Add(this.Text);
-            frmMaster.frmDNAobj.Add(this);
-            
+            frmMaster.lstDNAs.Items.Add(this.Text);         
 
         }
 
@@ -112,6 +112,11 @@ namespace DNATools
         {
             frmDigestInsertReplace newfrm = new frmDigestInsertReplace(current.Sequence);
             newfrm.Show();
+        }
+
+        public override string ToString()
+        {
+            return this.Text;
         }
     }
 }

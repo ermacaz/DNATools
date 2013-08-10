@@ -25,9 +25,8 @@ namespace DNATools
         {
             strDNAme = txtName.Text;
             frmDNA newDNAFrm = new frmDNA(frmMaster, strDNAme);
-            newDNAFrm.MdiParent = this.MdiParent;
+            newDNAFrm.MdiParent = frmMaster;
             newDNAFrm.Show();
-            //frmMaster.lstDNAs.Items.Add(strDNAme);
             this.Close();
         }
 

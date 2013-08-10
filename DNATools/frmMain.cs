@@ -13,11 +13,12 @@ namespace DNATools
 {
     public partial class frmMain : Form
     {
-        public List<frmDNA> frmDNAobj= new List<frmDNA>();
         public frmMain()
         {
             InitializeComponent();
-           
+            this.WindowState = FormWindowState.Maximized;
+            lstDNAs.DisplayMember = "strDNAme";
+
         }
 
         private void mnuCalculateTm_Click(object sender, EventArgs e)
@@ -28,8 +29,8 @@ namespace DNATools
         private void mnuFileNew_Click(object sender, EventArgs e)
         {
             frmDNAmer newFrm = new frmDNAmer(this);
-            newFrm.MdiParent = this;
-            newFrm.Show();
+            newFrm.StartPosition = FormStartPosition.CenterScreen;
+            newFrm.ShowDialog();
         }
 
         private void menuStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)

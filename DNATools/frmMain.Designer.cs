@@ -100,10 +100,12 @@
             // lstDNAs
             // 
             this.lstDNAs.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lstDNAs.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstDNAs.FormattingEnabled = true;
+            this.lstDNAs.ItemHeight = 25;
             this.lstDNAs.Location = new System.Drawing.Point(0, 24);
             this.lstDNAs.Name = "lstDNAs";
-            this.lstDNAs.Size = new System.Drawing.Size(120, 304);
+            this.lstDNAs.Size = new System.Drawing.Size(167, 304);
             this.lstDNAs.TabIndex = 7;
             this.lstDNAs.SelectedIndexChanged += new System.EventHandler(this.lstDNAs_SelectedIndexChanged);
             // 
