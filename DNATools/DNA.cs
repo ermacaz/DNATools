@@ -154,7 +154,8 @@ namespace DNATools
                     transArray[arrayCounter] = 'G';
                 arrayCounter++;
             }
-            string returnStr = new string(transArray);
+            var newArray = transArray.Take(arrayCounter).ToArray();
+            string returnStr = new string(newArray);
             return returnStr;
         }
 
