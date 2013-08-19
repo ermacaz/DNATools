@@ -37,8 +37,9 @@ namespace DNATest
         [TestMethod]
         public void DNA_Translate_test()
         {
-            DNA testDNA = new DNA(sequence);
-            string expectedTranslate = "SP";
+            string allproteinSeq = "tttttacttattatggtttctcctactgcttatcatcaaaataatgatgaatgttggcgtagtagaggt";
+            DNA testDNA = new DNA(allproteinSeq);
+            string expectedTranslate = "FLLIMVSPTAYHQNNDECWRSRG";
             Assert.AreEqual(expectedTranslate, testDNA.Translate());
         }
 
