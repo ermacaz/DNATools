@@ -71,6 +71,35 @@ namespace DNATools
             return temp;
         }
 
+        //creates alignment strings out of alignemnt score matrix
+        //updates references lseq1 and lseq2 rather than returning new lists
+        public static void Traceback(Cell[,] Matrix, string seq1, string seq2, List<char> lseq1, List<char> lseq2)
+        {
+            //set starting place to bottom right of matrix
+            Cell CurrentCell = Matrix[seq2.Length - 1, seq1.Length - 1];
+
+            //work way to top left
+            while (CurrentCell.PrevCell != null)
+            {
+                switch (CurrentCell.PCD)
+                {
+                    case Cell.prevCellDir.Diagonal:
+                        lseq1.Add(seq1[CurrentCell.Column]);
+                        lseq2.Add(seq2[CurrentCell.Row]);
+                        break;
+                    case Cell.prevCellDir.Left:
+                        lseq1.Add(seq1[CurrentCell.Column]);
+                        lseq2.Add('-');
+                        break;
+                    case Cell.prevCellDir.Above:
+                        lseq1.Add('-');
+                        lseq2.Add(seq2[CurrentCell.Row]);
+                        break;
+                }
+                CurrentCell = CurrentCell.PrevCell;
+            }
+        }
+
 
     }
 }
