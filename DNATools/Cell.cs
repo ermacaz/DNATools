@@ -8,12 +8,18 @@ namespace DNATools
 {
     class Cell
     {
-        private Cell prevCell;
         private List<Cell> prevCells = new List<Cell>();
         private int row;
         private int column;
-        private int score;
         private prevCellDir PCD;
+
+        public Cell PrevCell { get; set; }
+        public List<Cell> PrevCells
+        {
+            get { return prevCells; }
+            set { prevCells = value; }
+        }
+        public int Score { get; set; }
 
         //constructors
         public Cell()
@@ -31,25 +37,27 @@ namespace DNATools
         {
             row = r;
             column = c;
-            score = s;
+            Score = s;
         }
 
         public Cell(int r, int c, int s, Cell previous)
         {
             row = r;
             column = c;
-            score = s;
-            prevCell = previous;
+            Score = s;
+            PrevCell = previous;
         }
 
         public Cell(int r, int c, int s, Cell previous, prevCellDir pcd)
         {
             row = r;
             column = c;
-            score = s;
-            prevCell = previous;
+            Score = s;
+            PrevCell = previous;
             PCD = pcd;
         }
+
+
         public enum prevCellDir
         {
             Left,
