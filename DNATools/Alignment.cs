@@ -13,8 +13,8 @@ namespace DNATools
         public static Cell[,] Initialize(string seq1, string seq2, int simVal, int nonSimVal, int gapPenalty)
         {
             //add - to front of sequences for scoring purposes
-            seq1 = "-" + seq1;
-            seq2 = "-" + seq2;
+            seq1 = seq1;
+            seq2 = seq2;
             int len1 = seq1.Length;
             int len2 = seq2.Length;
 
@@ -48,7 +48,7 @@ namespace DNATools
 
             //assign points based on if seq1 base == seq2 base
             int simPoints;
-            if (seq1[i] == seq2[j])
+            if (seq1[j] == seq2[i])
                 simPoints = simVal;
             else
                 simPoints = nonSimVal;

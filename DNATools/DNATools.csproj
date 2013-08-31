@@ -44,10 +44,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Allignment.cs" />
+    <Compile Include="Alignment.cs" />
     <Compile Include="Cell.cs" />
     <Compile Include="CompareLists.cs" />
     <Compile Include="DNA.cs" />
+    <Compile Include="FrmAlignment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAlignment.Designer.cs">
+      <DependentUpon>FrmAlignment.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDigestDesigner.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReEnzyme.cs" />
+    <EmbeddedResource Include="FrmAlignment.resx">
+      <DependentUpon>FrmAlignment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDigestDesigner.resx">
       <DependentUpon>frmDigestDesigner.cs</DependentUpon>
     </EmbeddedResource>

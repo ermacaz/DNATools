@@ -71,5 +71,30 @@ namespace DNATools
         {
 
         }
+
+        private void btnAlign_Click(object sender, EventArgs e)
+        {
+            if (lstDNAs.SelectedIndices.Count != 2)
+            {
+                MessageBox.Show("Must select two DNA sequences", "Wrong number of sequences to allign");
+                return;
+            }
+
+            //get sequences of selected sequence forms on lstDNA to send to allignment form
+            string seq1 = null, seq2 = null;
+            int index = 0;
+            foreach (frmDNA frm in lstDNAs.SelectedItems)
+            {
+                if (index == 0)
+                    seq1 = frm.DNAseq;
+                if (index == 1)
+                    seq2 = frm.DNAseq;
+                ++index;
+            }
+            
+            FrmAlignment newfrm = new FrmAlignment(seq1, seq2);
+            newfrm.Show();
+
+        }
     }
 }

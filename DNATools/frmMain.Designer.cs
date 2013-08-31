@@ -43,6 +43,7 @@
             this.cloneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.btnAlign = new System.Windows.Forms.Button();
             this.menuStrip2.SuspendLayout();
             this.cmLstDNA.SuspendLayout();
             this.SuspendLayout();
@@ -112,6 +113,7 @@
             this.lstDNAs.ItemHeight = 25;
             this.lstDNAs.Location = new System.Drawing.Point(0, 24);
             this.lstDNAs.Name = "lstDNAs";
+            this.lstDNAs.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             this.lstDNAs.Size = new System.Drawing.Size(167, 304);
             this.lstDNAs.TabIndex = 7;
             this.lstDNAs.SelectedIndexChanged += new System.EventHandler(this.lstDNAs_SelectedIndexChanged);
@@ -149,13 +151,24 @@
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 26);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // btnAlign
+            // 
+            this.btnAlign.Location = new System.Drawing.Point(198, 280);
+            this.btnAlign.Name = "btnAlign";
+            this.btnAlign.Size = new System.Drawing.Size(75, 23);
+            this.btnAlign.TabIndex = 9;
+            this.btnAlign.Text = "Align";
+            this.btnAlign.UseVisualStyleBackColor = true;
+            this.btnAlign.Click += new System.EventHandler(this.btnAlign_Click);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(797, 328);
+            this.Controls.Add(this.btnAlign);
             this.Controls.Add(this.lstDNAs);
             this.Controls.Add(this.menuStrip2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -186,5 +199,6 @@
         private System.Windows.Forms.ToolStripMenuItem cloneToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Button btnAlign;
     }
 }

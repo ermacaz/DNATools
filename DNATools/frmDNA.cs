@@ -16,6 +16,7 @@ namespace DNATools
         DNA current = new DNA("");
         public frmMain frmMaster;
         public string strDNAme { get; set; }
+        public string DNAseq { get; set; }
         public frmDNA(frmMain master, string titleText)
         {
             InitializeComponent();
@@ -25,13 +26,15 @@ namespace DNATools
             frmMaster.lstDNAs.Items.Add(this);
         }
 
-        public frmDNA(frmMain master, string titleText, string nameExtension)
+        public frmDNA(frmMain master, string sequence, string nameExtension)
         {
             InitializeComponent();
             this.Text = nameExtension;
             strDNAme = nameExtension;
             frmMaster = master;
-            frmMaster.lstDNAs.Items.Add(this);         
+            frmMaster.lstDNAs.Items.Add(this);
+            current.Sequence = sequence;
+            txtDNASequence.Text = current.Sequence;
 
         }
 
@@ -46,6 +49,7 @@ namespace DNATools
             current.Sequence = txtDNASequence.Text;
             current.Clean();
             txtNumBases.Text = current.Sequence.Length.ToString();
+            DNAseq = txtDNASequence.Text;
         }
 
         private void mnuFileNew_Click(object sender, EventArgs e)
