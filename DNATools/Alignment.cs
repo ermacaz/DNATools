@@ -8,7 +8,7 @@ namespace DNATools
 {
     //adapted from Sara El-Sayed El-Metwally
     //http://www.codeproject.com/Articles/304772/DNA-Sequence-Alignment-using-Dynamic-Programming-A
-    class Allignment
+    class Alignment
     {
         public static Cell[,] Initialize(string seq1, string seq2, int simVal, int nonSimVal, int gapPenalty)
         {
