@@ -14,8 +14,8 @@ namespace DNATools
     {
         //hardcoded score values
         private const int SIMSCORE = 1;
-        private const int NONSIMSCORE = -1;
-        private const int GAPSCORE = -2;
+        private const int NONSIMSCORE = 0;
+        private const int GAPSCORE = -1;
 
         private List<char> lseq1 = new List<char>();
         private List<char> lseq2 = new List<char>();

@@ -55,8 +55,8 @@ namespace DNATools
 
             //3 possible values, take max
             int M1 = Matrix[i - 1, j - 1].Score + simPoints;
-            int M2 = Matrix[i, j - 1].Score + simPoints;
-            int M3 = Matrix[i - 1, j].Score + simPoints;
+            int M2 = Matrix[i, j - 1].Score + gapPenalty;
+            int M3 = Matrix[i - 1, j].Score + gapPenalty;
             int maxtemp = M1 >= M2 ? M1 : M2;
             int max = maxtemp > M3 ? maxtemp : M3;
 
