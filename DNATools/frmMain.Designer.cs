@@ -43,7 +43,6 @@
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.btnAlign = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.lstDNAs = new System.Windows.Forms.ListBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -156,15 +155,6 @@
             this.btnAlign.UseVisualStyleBackColor = true;
             this.btnAlign.Click += new System.EventHandler(this.btnAlign_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(210, 129);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // lstDNAs
             // 
             this.lstDNAs.Dock = System.Windows.Forms.DockStyle.Left;
@@ -208,7 +198,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1063, 570);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.menuStrip2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -241,7 +230,6 @@
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Button btnAlign;
-        private System.Windows.Forms.Button button1;
         public System.Windows.Forms.ListBox lstDNAs;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel1;

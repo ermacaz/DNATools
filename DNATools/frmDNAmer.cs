@@ -35,6 +35,10 @@ namespace DNATools
             return strDNAme;
         }
 
-       
+        private void txtName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+        }
+
+
     }
 }
