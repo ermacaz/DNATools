@@ -30,7 +30,7 @@ namespace DNATools
 
             Cell[,] Matrix = Alignment.Initialize(seq1, seq2, SIMSCORE, NONSIMSCORE, GAPSCORE);
 
-            //fll in datagrid
+            /*fll in datagrid
             this.dataGridView1.ColumnCount = Matrix.GetLength(1) + 1;
             for (int i = 0; i < this.dataGridView1.ColumnCount; i++)
             {
@@ -63,6 +63,7 @@ namespace DNATools
                 }
 
             }
+            */
 
             //get alligned sequences - function updates given char lists of each seq
             Alignment.Traceback(Matrix, seq1, seq2, lseq1, lseq2);

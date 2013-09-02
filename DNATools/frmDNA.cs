@@ -122,5 +122,10 @@ namespace DNATools
         {
             return this.Text;
         }
+
+        private void frmDNA_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            frmMaster.lstDNAs.Items.Remove(this);
+        }
     }
 }

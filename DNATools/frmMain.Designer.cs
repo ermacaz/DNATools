@@ -149,7 +149,7 @@
             this.btnAlign.Location = new System.Drawing.Point(0, 514);
             this.btnAlign.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAlign.Name = "btnAlign";
-            this.btnAlign.Size = new System.Drawing.Size(124, 28);
+            this.btnAlign.Size = new System.Drawing.Size(143, 28);
             this.btnAlign.TabIndex = 9;
             this.btnAlign.Text = "Align";
             this.btnAlign.UseVisualStyleBackColor = true;
@@ -158,14 +158,15 @@
             // lstDNAs
             // 
             this.lstDNAs.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lstDNAs.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstDNAs.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstDNAs.FormattingEnabled = true;
-            this.lstDNAs.ItemHeight = 29;
+            this.lstDNAs.HorizontalScrollbar = true;
+            this.lstDNAs.ItemHeight = 23;
             this.lstDNAs.Location = new System.Drawing.Point(0, 0);
             this.lstDNAs.Margin = new System.Windows.Forms.Padding(4);
             this.lstDNAs.Name = "lstDNAs";
             this.lstDNAs.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.lstDNAs.Size = new System.Drawing.Size(125, 514);
+            this.lstDNAs.Size = new System.Drawing.Size(140, 514);
             this.lstDNAs.TabIndex = 7;
             this.lstDNAs.SelectedIndexChanged += new System.EventHandler(this.lstDNAs_SelectedIndexChanged);
             this.lstDNAs.DoubleClick += new System.EventHandler(this.lstDNAs_DoubleClick);
@@ -189,7 +190,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 28);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(124, 542);
+            this.panel1.Size = new System.Drawing.Size(143, 542);
             this.panel1.TabIndex = 12;
             // 
             // frmMain
