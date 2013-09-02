@@ -51,6 +51,7 @@
             this.mnuFileNew = new System.Windows.Forms.ToolStripMenuItem();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -126,13 +127,15 @@
             // txtDNASequence
             // 
             this.txtDNASequence.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDNASequence.Location = new System.Drawing.Point(30, 65);
+            this.txtDNASequence.Location = new System.Drawing.Point(48, 64);
             this.txtDNASequence.Margin = new System.Windows.Forms.Padding(4);
             this.txtDNASequence.Name = "txtDNASequence";
             this.txtDNASequence.Size = new System.Drawing.Size(610, 259);
             this.txtDNASequence.TabIndex = 5;
             this.txtDNASequence.Text = "";
+            this.txtDNASequence.VScroll += new System.EventHandler(this.txtDNASequence_VScroll);
             this.txtDNASequence.TextChanged += new System.EventHandler(this.txtDNASequence_TextChanged);
+            this.txtDNASequence.Resize += new System.EventHandler(this.txtDNASequence_Resize);
             // 
             // mnuSequenceLowcase
             // 
@@ -247,11 +250,20 @@
             this.menuStrip2.TabIndex = 4;
             this.menuStrip2.Text = "menuStrip2";
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(0, 64);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(46, 259);
+            this.panel1.TabIndex = 7;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
             // frmDNA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(679, 355);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtNumBases);
             this.Controls.Add(this.txtDNASequence);
             this.Controls.Add(this.menuStrip2);
@@ -293,5 +305,6 @@
         private System.Windows.Forms.ToolStripMenuItem mnuSequenceAlign;
         private System.Windows.Forms.ToolStripMenuItem mnuSequenceUpcase;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
