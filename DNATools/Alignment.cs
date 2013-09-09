@@ -10,11 +10,10 @@ namespace DNATools
     //http://www.codeproject.com/Articles/304772/DNA-Sequence-Alignment-using-Dynamic-Programming-A
     class Alignment
     {
-        public static Cell[,] Initialize(string seq1, string seq2, int simVal, int nonSimVal, int gapPenalty)
+        private static string seqAligner = "";
+        public static string Initialize(string seq1, string seq2, int simVal, int nonSimVal, int gapPenalty)
         {
-            //add - to front of sequences for scoring purposes
-            seq1 = seq1;
-            seq2 = seq2;
+            
             int len1 = seq1.Length;
             int len2 = seq2.Length;
 
@@ -38,7 +37,7 @@ namespace DNATools
                     Matrix[i, j] = GetMax(i, j, seq1, seq2, Matrix, simVal, nonSimVal, gapPenalty);
                 }
             }
-            return Matrix;
+            return seqAligner;
         }
 
         public static Cell GetMax(int i, int j, string seq1, string seq2, Cell[,] Matrix, int simVal, int nonSimVal,
@@ -86,14 +85,17 @@ namespace DNATools
                     case Cell.prevCellDir.Diagonal:
                         lseq1.Add(seq1[CurrentCell.Column]);
                         lseq2.Add(seq2[CurrentCell.Row]);
+                        seqAligner += "|"
                         break;
                     case Cell.prevCellDir.Left:
                         lseq1.Add(seq1[CurrentCell.Column]);
                         lseq2.Add('-');
+                        seqAligner += (" ");
                         break;
                     case Cell.prevCellDir.Above:
                         lseq1.Add('-');
                         lseq2.Add(seq2[CurrentCell.Row]);
+                        seqAligner += (" ");
                         break;
                 }
                 CurrentCell = CurrentCell.PrevCell;
